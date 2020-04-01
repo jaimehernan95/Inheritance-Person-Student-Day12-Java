@@ -21,13 +21,16 @@ A Student class constructor, which has **4** parameters:
 A char calculate() method that calculates a Student object's average and returns the grade character representative of their calculated average:
 
 ## Grading Scale
-**letter**     **average**
-### O :     90 <= a <= 100
-### E :     80  <= a <90
-### A :     70  <= a <80
-### P :     55  <= a <70
-### D :     40  <= a < 55
-### T :         a   <  40
+_______________________________
+### **letter** |    **average**
+_______________________________
+### | O :       |   90 <= a <= 100
+### | E :       |   80  <= a <90
+### | A :       |   70  <= a <80
+### | P :       |   55  <= a <70
+### | D :       |   40  <= a < 55
+### | T :       |       a   <  40
+ ______________________________
  
 ## Input Format
 
