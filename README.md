@@ -7,71 +7,59 @@
 
  **hackerrank website provides concepts about _Inheritance,  Subclass and Subclass Constructors_**
 
-###  Inheritance
+## Objective
 
-This allows you to establish a hierarchy for your classes. A class that inherits from some other class (_referred to as a superclass_) is called a subclass. While a subclass inherits methods and behaviors from a superclass, it can also declare new fields and methods (*as well as override superclass methods*).
+You are given two classes, Person and Student, where Person is the base class and Student is the derived class. Completed code for Person and a declaration for Student are provided for you in the editor. Observe that Student inherits all the properties of Person.
+Complete the Student class by writing the following:
 
+A Student class constructor, which has **4** parameters:
 
-###  Subclass
-*A subclass* is defined with the extends keyword. For example, the syntax ClassB extends ClassA establishes ClassB as a subclass of of ClassA. Java only supports single inheritance, meaning a subclass cannot extend more than one superclass.
-Synonymous terms: derived class, extended class, child class.
+1. A string _**first name**_,
+2. A string, _**Last name**_
+3. An integer, _**id**_
+4. An integer array (or vector) of test scores, .
+A char calculate() method that calculates a Student object's average and returns the grade character representative of their calculated average:
 
+## Grading Scale
+**letter**     **average**
+### O :     90 <= a <= 100
+### E :     80  <= a <90
+### A :     70  <= a <80
+### P :     55  <= a <70
+### D :     40  <= a < 55
+### T :         a   <  40
+ 
+## Input Format
 
-### Subclass Constructors
-Because a constructor initializes an instance of a class, they are never inherited;_however,_ the subclass must call a superclass constructor as it is an extension of a superclass object. This can be done in either of the two ways shown below.
+The locked stub code in your editor calls your Student class constructor and passes it the necessary arguments. It also calls the calculate method (**which takes no arguments** ).
 
+You are not responsible for reading the following input from stdin:
+The first line contains , **first name**, **Last name** , and, **id**   respectively. The second line contains the number of test scores. The third line of space-separated integers describes **scores** .
 
-***Consider the following class:***
+## Constraints
 
-class MySuperclass{
-    // superclass instance variable:
-    String myString;
-    
-    // superclass default (empty) constructor:
-    MySuperclass(){} 
-    
-    // superclass parameterized constructor:
-    MySuperclass(String myString){ 
-        // initialize instance variable
-        this.myString = myString; 
-    }
-}
-1) The subclass makes an explicit call to the superclass' parameterized constructor (i.e.: it calls super(...);):
+### 1 <= | first name|, | last name|<=10
+###  |id| = 7
+### 0<= score, average<=100
 
-class MySubclass extends MySuperclass{
-    // subclass constructor:
-    MySubclass(String myString){ 
-        // explicit call to superclass constructor:
-        super(myString); 
-    }
-}
-2) The subclass makes an implicit call to the superclass' default constructor (i.e.: a behind-the-scenes call to super(); happens automatically):
+## Output Format
 
-class MySubclass extends MySuperclass{
-    MySubclass(String myString){
-        // behind-the-scenes implicit call to superclass' default constructor happens
-        
-        // subclass can now initialize superclass instance variable:
-        this.myString = myString; 
-    }
-}
+This is handled by the locked stub code in your editor. Your output will be correct if your Student class constructor and calculate() method are properly implemented.
 
-In the second example above, observe that we are initializing a field (myString) that isn't even declared in that class; the reason why this works is because it's inherited from MySuperclass and therefore can be accessed with the this keyword.
+### Sample Input
 
+#### Heraldo Memelli 8135627 
+#### 2
+#### 100 80
 
-Note: If a superclass does not have a default constructor, any subclasses extending it must make an explicit call to one of the superclass' parameterized constructors.
+### Sample Output
 
+#### Name: Memelli, Heraldo 
+#### ID: 8135627
+#### Grade: O
 
-###  Overriding Methods
-
-When overriding a method, it is best practice to precede the method with the @Override annotation. **This signifies** to both the reader and the compiler that this method is overriding an inherited method, and will also help you check your work by generating a compiler error if no such method exists in the superclass. 
+## Explanation
+This student had 2 scores to average: 100 and 80. The student's average grade is  (100+80) /2 = 90. An average grade of  90 corresponds to the letter grade O, so our calculate() method should return the character'O'.
 
 
-### Conclusion
-
-This function is convenient because I used to build simple servelts websites and re use the same code.
-
-### Source:
-
-**hackerrank website**
-https://www.hackerrank.com/challenges/30-inheritance/tutorial, _Accessed on March 30, 2020_
+  
