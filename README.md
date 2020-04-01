@@ -9,7 +9,7 @@
 
 ###  Inheritance
 
-This allows you to establish a hierarchy for your classes. A class that inherits from some other class (_referred to as a superclass_) is called a subclass. While a subclass inherits methods and behaviors from a superclass, it can also declare new fields and methods (as well as override superclass methods).
+This allows you to establish a hierarchy for your classes. A class that inherits from some other class (_referred to as a superclass_) is called a subclass. While a subclass inherits methods and behaviors from a superclass, it can also declare new fields and methods (*as well as override superclass methods*).
 
 
 ###  Subclass
@@ -18,7 +18,7 @@ Synonymous terms: derived class, extended class, child class.
 
 
 ### Subclass Constructors
-Because a constructor initializes an instance of a class, they are never inherited_; however,_ the subclass must call a superclass constructor as it is an extension of a superclass object. This can be done in either of the two ways shown below.
+Because a constructor initializes an instance of a class, they are never inherited;_however,_ the subclass must call a superclass constructor as it is an extension of a superclass object. This can be done in either of the two ways shown below.
 
 
 ***Consider the following class:***
